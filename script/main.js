@@ -79,5 +79,5 @@ var fact8 = [
 var fact9 = [
 	'Title',
 	'Text',
-	'Source'
+	'Source',
 ];
