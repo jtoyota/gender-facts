@@ -80,4 +80,4 @@ var fact9 = [
 	'Title',
 	'Text',
 	'Source'
-];'
+];
