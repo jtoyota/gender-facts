@@ -2,8 +2,9 @@
 
 body {
 	margin: 0px auto;
-	padding: 4% 20%;
-	background-color: #F2F2F2;	
+	width: 60%;
+	background-color: #f1f2f6;
+	background-image: linear-gradient(180deg, #f1f2f6 30%, #b9b6b6 90%);
 	top: 0px;
 	color: #4a4a4a;
 	font-family: Helvetica, sans-serif;
@@ -11,117 +12,27 @@ body {
 	font-size: 14pt;
 }
 
+p {
+	line-height: 1.5em;
+}
+
 /*Layout*/
 
 #intro {
-	margin: auto;
-	padding: 0 12%;
-	line-height: 1.4em;
+	padding: 4% 16%;
 }
 
 nav {
-	margin: 0 auto;
+	margin: 4% auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 #filter {
-	width: 40%;
 	position: relative;
-}
-
-#search {
 	width: 32%;
-}
-
-#send {
-	width: 24%;
-}
-
-/*Headings*/
-
-h1 {
-	font-family: Bitter;
-	font-weight: 700;
-	font-size: 3em;
-	text-align: center;
-	color: #4A90E2;
-	line-height: 1.5em;
-}
-
-h2 {
-	font-weight: 700;
-	margin: 0px;
-	vertical-align: middle;
-}
-
-/*Buttons*/
-
-button {
-	min-width: 200px;
-	min-height: 56px;
-	margin: 4% 0 auto;
-	border: 2px solid #4a4a4a;
-	padding: 0 16px;
-	background-color: #F2F2F2;
-	outline: none;
-}
-
-button:hover {
-	border-color: #5AEAEF;
-}
-
-.buttonLabel {
-	float: left;
-	font-weight: 800;
-	color: #4a4a4a;
-}
-
-.fa-chevron-down {
-	font-size: 24px;
-	font-weight: 900;
-	float: right;
-}
-
-
-
-.fa-search {
-	font-size: 24px;
-	font-weight: 900;
-	float: right;
-}
-
-.containerMyth {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-}
-
-.myth {
-	display: table;
-	width: 26%;
-	min-width: 240px;
-	margin: 20px 0;
-	height: 232px;
-	border-radius: 4px;
-	background-color: white;
-	text-align: center;
-	font-style: italic;
-	line-height: 1.5em;
-	padding: 40px 24px;
-	box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.3);
-}
-
-.myth:hover {
-	background-color: #5AEAEF;
-	cursor: pointer;
-}
-
-.mythText {
-	text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+	margin: 16px;
 }
 
 #dropdown {
@@ -130,7 +41,7 @@ button:hover {
 	left: -2px;
 	top: 100%;
 	background-color: white;
-	border: 2px solid #5AEAEF;
+	border: 2px solid #4a4a4a;
 	border-width: 2px;
 	border-style: solid;
 	color: #4a4a4a;
@@ -157,6 +68,127 @@ button:hover {
   display: none;
 }
 
+#searchBox {
+	width: 24%;
+	min-width: 200px;
+	min-height: 52px;
+	margin: 16px;
+	border: 2px solid #4a4a4a;
+	border-radius: 0;
+	padding: 0 16px;
+	background-color: #f1f2f6;
+	background-image: url("../assets/search.svg");
+	background-repeat: no-repeat;
+    background-position: right;
+	outline: none;
+	float: left;
+}
+
+#searchBox:focus,
+#searchBox:hover { 
+    border: 2px solid #5AEAEF;
+}
+
+::placeholder {
+    font-weight: 800;
+    color: #4a4a4a;;
+    opacity: 1;
+}
+
+#send {
+	width: 24%;
+	margin: 16px;
+}
+
+/*Headings*/
+
+h1 {
+	font-family: Bitter;
+	font-weight: 700;
+	font-size: 3em;
+	text-align: center;
+	color: #4A90E2;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-weight: 700;
+	margin: 0px;
+	vertical-align: middle;
+	line-height: 1.3em;
+	width: 90%;
+}
+
+.modal p {
+	width: 90%;
+}
+
+/*Buttons*/
+
+nav button {
+	min-width: 200px;
+	min-height: 56px;
+	border: 2px solid #4a4a4a;
+	padding: 0 16px;
+	background-color: #f1f2f6;
+	outline: none;
+}
+
+button:hover {
+	border-color: #5AEAEF;
+}
+
+.buttonLabel {
+	float: left;
+	font-weight: 800;
+	color: #4a4a4a;
+}
+
+.fa-chevron-down {
+	font-size: 24px;
+	font-weight: 900;
+	float: right;
+}
+
+.fa-search {
+	font-size: 24px;
+	font-weight: 900;
+	float: right;
+}
+
+.containerMyth {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.myth {
+	display: table;
+	width: 18%;
+	min-width: 200px;
+	margin: 16px;
+	height: 232px;
+	border-radius: 4px;
+	background-color: white;
+	text-align: center;
+	font-style: italic;
+	line-height: 1.5em;
+	padding: 40px 24px;
+	box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.3);
+}
+
+.myth:hover {
+	background-color: #5AEAEF;
+	cursor: pointer;
+}
+
+.mythText {
+	text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
 /*Modal*/
 .overlay {
 	display: none;
@@ -167,16 +199,40 @@ button:hover {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal {
+.factModal {
+	display: none;
+	top: 0px;
+	position: fixed;
 	width: 60%;
+	margin: 4% auto;
+	padding: 2%;
+	border-radius: 8px;
+	background-color: white;
+	line-height: 1.5em;
+	box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+.sendModal {
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 30%;
 	margin: 10% auto;
 	padding: 2%;
 	border-radius: 8px;
 	background-color: white;
+	line-height: 1.5em;
 	box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+.modal{
+	left: 0;
+	right: 0;
 }
 
 .closeModal {
@@ -185,12 +241,82 @@ button:hover {
 }
 
 .closeModal:hover {
+	float: right;
 	color: #5AEAEF;
 	text-decoration: none;
 	cursor: pointer;
 }
 
+.modalActions {
+	text-align: right;
+}
 
 /*Media queries*/
+@media screen and (max-width: 1900px) {
+	body {
+		width: 84%;
+	}
+	.myth {
+	width: 24%;
+	}
+}
 
+@media screen and (max-width: 1200px) {
+	body {
+		width: 95%;
+	}
+	.myth {
+		width: 36%;
+	}
+}
 
+@media screen and (max-width: 600px) {
+	body {
+		width: 92%;
+	}
+
+	#filter,
+	#searchBox,
+	#send {
+		width: 100%;
+	}
+	
+	.myth {
+	width: 80%;
+	}
+}
+
+form {
+	margin: 24px 0px;
+	text-align: left;
+}
+
+form input {
+	margin: 0px 0px 16px 0px;
+	height: 40px;
+	width: 100%;
+}
+
+#cancelButton {
+	border: 0;
+	background-color: #fff;
+	text-align: right;
+}
+
+#sendButton {
+	border: 2px solid #4a4a4a;
+	margin: 0px 16px;
+	padding: 16px 32px;
+	background-color: #4a4a4a;
+	color: white;
+}
+
+#sendButton:hover {
+	border: 2px solid #5AEAEF;
+	color: #4a4a4a;
+	background-color: white;
+}
+
+#message {
+	height: 80px;
+}
